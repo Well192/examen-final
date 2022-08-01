@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class MenuPrincipal extends JDialog {
+public class MenuPrincipal extends JFrame {
     private JPanel contentPane;
     private JComboBox comboBox2;
     private JComboBox comboBox1;
@@ -9,8 +9,6 @@ public class MenuPrincipal extends JDialog {
 
     public MenuPrincipal() {
         setContentPane(contentPane);
-        setModal(true);
-
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
@@ -18,18 +16,6 @@ public class MenuPrincipal extends JDialog {
                 onCancel();
             }
         });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-    }
-
-    private void onOK() {
-        // add your code here
-        dispose();
     }
 
     private void onCancel() {
@@ -41,6 +27,5 @@ public class MenuPrincipal extends JDialog {
         MenuPrincipal dialog = new MenuPrincipal();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
     }
 }
