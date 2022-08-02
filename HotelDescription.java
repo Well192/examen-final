@@ -6,9 +6,13 @@ public class HotelDescription extends JDialog {
     private JTextArea textAreaOpiniones;
     private JLabel labelDireccion;
     private JLabel labelFoto;
-    private JButton reservarButton;
+    private JButton siguienteButton;
     private JButton opinarButton;
     private JLabel labelDescription;
+    private JCheckBox estacionamientoCheckBox;
+    private JTextPane textPane1;
+    private JCheckBox restauranteCheckBox;
+    private JCheckBox habitacionesCheckBox;
     private JButton buttonOK;
 
     public HotelDescription() {
