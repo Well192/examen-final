@@ -8,12 +8,12 @@ public class PrototypeRegistry {
        HabitacionFamiliar habitacionFamiliar = new HabitacionFamiliar(350);
        HabitacionEconomica habitacionEconomica = new HabitacionEconomica(100);
        HabitacionNormal habitacionNormal = new HabitacionNormal(200);
-       HabitacionPremium habitacionPremium = new HabitacionPremium(1000);
+       HabitacionPremium habitacionPremium = new HabitacionPremium(600);
 
        habitaciones.put("Familiar", habitacionFamiliar );
        habitaciones.put("Economica", habitacionEconomica);
        habitaciones.put("Normal", habitacionNormal);
-       habitaciones.put("Habitacion Premium", habitacionPremium);
+       habitaciones.put("Premium", habitacionPremium);
 
     }
 

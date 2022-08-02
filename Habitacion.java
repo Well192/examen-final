@@ -12,6 +12,6 @@ public abstract class Habitacion implements Prototype{
         this.precio = precio;
     }
 
-    public abstract Habitacion clone();
+    public abstract Prototype clone();
 
 }
