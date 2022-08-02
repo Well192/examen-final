@@ -1,4 +1,4 @@
-public class HabitacionNormal extends Habitacion{
+public class HabitacionNormal extends Habitacion implements Servicio{
 
     public HabitacionNormal(float precio) {
         super(precio);
@@ -12,5 +12,11 @@ public class HabitacionNormal extends Habitacion{
     @Override
     public Habitacion clone() {
         return new HabitacionNormal(this.precio);
+    }
+
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitNormal(this);
     }
 }
