@@ -1,26 +1,27 @@
 import javax.swing.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
-public class HotelDescription extends JFrame {
-
+public class HotelDescription extends JDialog {
     private JPanel contentPane;
+    private JPanel panelHotel;
+    private JTextArea textAreaOpiniones;
     private JLabel labelDireccion;
+    private JLabel labelFoto;
+    private JButton reservarButton;
+    private JButton opinarButton;
+    private JLabel labelDescription;
+    private JButton buttonOK;
 
     public HotelDescription() {
         setContentPane(contentPane);
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                dispose();
-            }
-        });
+        setModal(true);
+        getRootPane().setDefaultButton(buttonOK);
     }
 
     public static void main(String[] args) {
-        HotelDescription hotelDescription = new HotelDescription();
-        hotelDescription.pack();
-        hotelDescription.setVisible(true);
+        HotelDescription dialog = new HotelDescription();
+        dialog.pack();
+        dialog.setVisible(true);
+        System.exit(0);
     }
 
     private void createUIComponents() {

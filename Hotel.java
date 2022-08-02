@@ -4,6 +4,9 @@ public class Hotel {
     private String nombre;
     private String ubicacion;
     private String foto;
+
+    private String descripcion;
+
     ArrayList<Opinion> opiniones;
     ArrayList<Habitacion> habitaciones;
 
