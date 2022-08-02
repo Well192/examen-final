@@ -1,4 +1,6 @@
-public interface Visitor {
+package ServicioHabitaciones;
+
+public interface VisitorHabitacion {
 
     void visitEconomic(HabitacionEconomica he);
     void visitNormal(HabitacionNormal hn);

@@ -1,5 +1,6 @@
+package ServicioHabitaciones;
+
 import java.util.HashMap;
-import java.util.Map;
 
 public class PrototypeRegistry {
 
@@ -14,7 +15,6 @@ public class PrototypeRegistry {
        habitaciones.put("Economica", habitacionEconomica);
        habitaciones.put("Normal", habitacionNormal);
        habitaciones.put("Premium", habitacionPremium);
-
     }
 
     public Prototype get(String key){

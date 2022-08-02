@@ -1,4 +1,6 @@
-public class BrindarServicio implements Visitor {
+package ServicioHabitaciones;
+
+public class BrindarServicioHabitacion implements VisitorHabitacion {
 
     @Override
     public void visitEconomic(HabitacionEconomica he) {

@@ -1,4 +1,6 @@
-public class HabitacionEconomica extends Habitacion implements Servicio {
+package ServicioHabitaciones;
+
+public class HabitacionEconomica extends Habitacion implements ServicioHabitacion {
     public HabitacionEconomica(float precio) {
         super(precio);
         super.type = "economica";
@@ -14,7 +16,7 @@ public class HabitacionEconomica extends Habitacion implements Servicio {
     }
 
     @Override
-    public void accept(Visitor v) {
+    public void accept(VisitorHabitacion v) {
         v.visitEconomic(this);
     }
 }
