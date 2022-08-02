@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class PrototypeRegistry {
 
-    private final HashMap<String , Habitacion> habitaciones = new HashMap<>();
+    private final HashMap<String , Prototype> habitaciones = new HashMap<>();
     public PrototypeRegistry() {
        HabitacionFamiliar habitacionFamiliar = new HabitacionFamiliar(350);
        HabitacionEconomica habitacionEconomica = new HabitacionEconomica(100);
@@ -17,9 +17,12 @@ public class PrototypeRegistry {
 
     }
 
-    public Habitacion get(String key){
+    public Prototype get(String key){
         return habitaciones.get(key).clone();
     }
 
+    public void addElement(String key, Prototype element){
+        habitaciones.put(key, element);
+    }
 
 }
