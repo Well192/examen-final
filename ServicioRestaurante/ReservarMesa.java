@@ -1,6 +1,5 @@
 package ServicioRestaurante;
 
-import auxClasses.DatosReserva;
 import auxClasses.Servicio;
 
 import java.util.Date;

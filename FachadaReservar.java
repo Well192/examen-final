@@ -10,14 +10,14 @@ import java.util.Date;
 
 public class FachadaReservar {
 
-    ReservarHabitacion habitacion = new ReservarHabitacion();
-    ReservarMesa mesa = new ReservarMesa();
-    ReservarEstacionamiento estacionamiento = new ReservarEstacionamiento();
+    private ReservarHabitacion habitaciones = new ReservarHabitacion();
+    private ReservarMesa mesas = new ReservarMesa();
+    private ReservarEstacionamiento estacionamiento = new ReservarEstacionamiento();
 
     public void hacerReserva(String nombre, String apellido, Date fecha, float numero, Servicio servicio){
 
         if(servicio instanceof Habitacion){
-            habitacion.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
+            habitaciones.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
         }
 
         if(servicio instanceof EspacioEstacionamiento){
@@ -25,7 +25,7 @@ public class FachadaReservar {
         }
 
         if(servicio instanceof Mesa){
-            mesa.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
+            mesas.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
         }
     }
 

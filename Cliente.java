@@ -9,6 +9,4 @@ public class Cliente {
         this.numDNI = numDNI;
     }
 
-
-
 }
