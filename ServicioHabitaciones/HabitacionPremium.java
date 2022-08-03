@@ -1,6 +1,6 @@
 package ServicioHabitaciones;
 
-public class HabitacionPremium extends Habitacion implements ServicioHabitacion {
+public class HabitacionPremium extends Habitacion implements BeneficioHabitacion {
 
     public HabitacionPremium(float precio) {
         super(precio);

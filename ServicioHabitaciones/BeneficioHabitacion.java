@@ -2,6 +2,6 @@ package ServicioHabitaciones;
 
 import ServicioHabitaciones.VisitorHabitacion;
 
-public interface ServicioHabitacion {
+public interface BeneficioHabitacion {
     void accept(VisitorHabitacion v);
 }
