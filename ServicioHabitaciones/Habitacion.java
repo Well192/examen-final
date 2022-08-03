@@ -5,7 +5,7 @@ import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
-public abstract class Habitacion implements Prototype, Servicio {
+public abstract class Habitacion implements PrototypeHabitacion, Servicio {
     int numero;
     float precio;
     boolean esOcupado = false;
@@ -21,6 +21,6 @@ public abstract class Habitacion implements Prototype, Servicio {
         this.precio = precio;
     }
 
-    public abstract Prototype clone();
+    public abstract PrototypeHabitacion clone();
 
 }
