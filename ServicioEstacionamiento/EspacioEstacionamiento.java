@@ -4,16 +4,17 @@ import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
-public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio {
-    private Float precious;
+public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio, BeneficioEstacionamiento {
+
+    private Float precio;
     private String tamano;
     private boolean Ocupado;
     private ArrayList<DatosReservaEstacionamiento> reservas;
 
 
-    public EspacioEstacionamiento(String tamano, Float precious) {
+    public EspacioEstacionamiento(String tamano, Float precio) {
         this.tamano = tamano;
-        this.precious = precious;
+        this.precio = precio;
     }
 
     public boolean isOcupado() {
@@ -37,8 +38,12 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
 
     @Override
     public EspacioEstacionamiento clone() {
-        return new EspacioEstacionamiento(this.tamano, this.precious);
+        return new EspacioEstacionamiento(this.tamano, this.precio);
     }
 
 
+    @Override
+    public void accept(VisitorEstacionamiento v) {
+        v.visitEspacioEstacionamiento(this);
+    }
 }

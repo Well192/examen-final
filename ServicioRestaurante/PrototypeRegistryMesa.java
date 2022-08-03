@@ -1,7 +1,5 @@
 package ServicioRestaurante;
 
-import ServicioRestaurante.PrototypeMesa;
-
 import java.util.HashMap;
 
 public class PrototypeRegistryMesa {
