@@ -24,10 +24,17 @@ public class Cliente {
         PrototypeRegistryEstacionamiento estacionamiento = new PrototypeRegistryEstacionamiento();
         PrototypeRegistryMesa mesa = new PrototypeRegistryMesa();
 
+        System.out.println("Reservado servicion economicos -----------------------------------------------------");
         //reserva los 3 servicios a traves de la fachada mas economicos para hoy
         fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 2f,(Servicio) habitacion.get("Economica"));
         fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 12f,(Servicio) estacionamiento.get("pequeno"));
         fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 4f,(Servicio) mesa.get("pequeno"));
+
+        System.out.println("\n\nReservado servicion lujosos -----------------------------------------------------");
+        //reserva los 3 servicios a traves de la fachada mas caros para hoy
+        fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 2f,(Servicio) habitacion.get("Premium"));
+        fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 12f,(Servicio) estacionamiento.get("grande"));
+        fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 4f,(Servicio) mesa.get("privada"));
 
     }
 
