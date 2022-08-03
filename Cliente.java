@@ -17,7 +17,7 @@ public class Cliente {
     }
 
     public static void main (String[] args){
-        Cliente uno = new Cliente("Armando", "Lluen", "33333333");
+        Cliente uno = new Cliente("Armando Alberto", "Lluen Gallardo", "33333333");
         FachadaReservar fachada = new FachadaReservar();
         Date fechaActual = new Date();
         PrototypeRegistryHabitacion habitacion = new PrototypeRegistryHabitacion();
