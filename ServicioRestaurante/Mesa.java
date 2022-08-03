@@ -5,11 +5,14 @@ import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
-public class Mesa implements Servicio {
+public class Mesa implements Servicio,PrototypeMesa {
     boolean Ocupado;
     ArrayList<DatosReserva> reservas;
-
-    public Mesa() {
+    String tipo;
+    Float precio;
+    public Mesa(String tipo, Float precio) {
+        this.tipo = tipo;
+        this.precio = precio;
     }
 
     public boolean isOcupado() {
@@ -25,4 +28,13 @@ public class Mesa implements Servicio {
         System.out.println("se esta reservando mesa para: " + reserva.toString());
     }
 
+    @Override
+    public String getTipo() {
+        return tipo;
+    }
+
+    @Override
+    public Mesa clone() {
+        return new Mesa(this.tipo, this.precio);
+    }
 }
