@@ -34,7 +34,9 @@ public class Mesa implements Servicio,PrototypeMesa {
     }
 
     @Override
-    public Mesa clone() {
-        return new Mesa(this.tipo, this.precio);
+    public PrototypeMesa clone() {
+        return null;
     }
+
+
 }
