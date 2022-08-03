@@ -33,7 +33,7 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
     }
 
     @Override
-    public void accept(VisitorEstacionamiento v) {
-        v.visitEspacioEstacionamiento(this);
+    public String accept(VisitorEstacionamiento v) {
+        return v.visitEspacioEstacionamiento(this);
     }
 }
