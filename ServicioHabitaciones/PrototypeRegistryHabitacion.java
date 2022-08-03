@@ -2,10 +2,10 @@ package ServicioHabitaciones;
 
 import java.util.HashMap;
 
-public class PrototypeRegistry {
+public class PrototypeRegistryHabitacion {
 
-    private final HashMap<String , Prototype> habitaciones = new HashMap<>();
-    public PrototypeRegistry() {
+    private final HashMap<String, PrototypeHabitacion> habitaciones = new HashMap<>();
+    public PrototypeRegistryHabitacion() {
        HabitacionFamiliar habitacionFamiliar = new HabitacionFamiliar(350);
        HabitacionEconomica habitacionEconomica = new HabitacionEconomica(100);
        HabitacionNormal habitacionNormal = new HabitacionNormal(200);
@@ -16,12 +16,11 @@ public class PrototypeRegistry {
        habitaciones.put("Normal", habitacionNormal);
        habitaciones.put("Premium", habitacionPremium);
     }
-
-    public Prototype get(String key){
+    public PrototypeHabitacion get(String key){
         return habitaciones.get(key).clone();
     }
 
-    public void addElement(String key, Prototype element){
+    public void addElement(String key, PrototypeHabitacion element){
         habitaciones.put(key, element);
     }
 
