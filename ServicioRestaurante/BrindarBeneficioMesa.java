@@ -3,12 +3,12 @@ package ServicioRestaurante;
 public class BrindarBeneficioMesa implements VisitorRestaurante{
 
     @Override
-    public void visitMesaSimple(MesaSimple ms) {
-        System.out.println("Entrada gratis");
+    public String visitMesaSimple(MesaSimple ms) {
+        return "Entrada gratis";
     }
 
     @Override
-    public void visitMesaVIP(MesaVIP mvip) {
-        System.out.println("Postres gratis con entrada");
+    public String visitMesaVIP(MesaVIP mvip) {
+        return "Postres gratis con entrada";
     }
 }

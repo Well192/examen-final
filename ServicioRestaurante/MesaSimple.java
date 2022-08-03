@@ -24,7 +24,7 @@ public class MesaSimple extends Mesa implements  BeneficioRestaurante{
 
 
     @Override
-    public void accept(VisitorRestaurante v) {
-        v.visitMesaSimple(this);
+    public String accept(VisitorRestaurante v) {
+       return v.visitMesaSimple(this);
     }
 }
