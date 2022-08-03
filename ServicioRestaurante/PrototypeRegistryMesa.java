@@ -13,7 +13,6 @@ public class PrototypeRegistryMesa {
         mesas.put("pequeno", mesaPequeno);
         mesas.put("grande", mesaGrande);
         mesas.put("privada", mesaPrivada);
-
     }
     public PrototypeMesa get(String key){
         return mesas.get(key).clone();

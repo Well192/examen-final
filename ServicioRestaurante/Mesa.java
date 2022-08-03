@@ -1,8 +1,6 @@
 package ServicioRestaurante;
 
-import ServicioHabitaciones.DatosReservaHabitacion;
 import auxClasses.Servicio;
-
 import java.util.ArrayList;
 
 public abstract class Mesa implements Servicio, PrototypeMesa {
@@ -32,6 +30,4 @@ public abstract class Mesa implements Servicio, PrototypeMesa {
 
     @Override
     public abstract PrototypeMesa clone();
-
-
 }

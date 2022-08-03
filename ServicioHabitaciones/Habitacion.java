@@ -1,8 +1,6 @@
 package ServicioHabitaciones;
 
-import auxClasses.DatosReserva;
 import auxClasses.Servicio;
-
 import java.util.ArrayList;
 
 public abstract class Habitacion implements PrototypeHabitacion, Servicio {
@@ -10,7 +8,6 @@ public abstract class Habitacion implements PrototypeHabitacion, Servicio {
     float precio;
     boolean esOcupado = false;
     String type;
-
     protected ArrayList<DatosReservaHabitacion> reservas = new ArrayList<>();
 
     public void setEsOcupado(boolean esOcupado) {
