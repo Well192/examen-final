@@ -5,7 +5,7 @@ import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
-public class Mesa implements Servicio,PrototypeMesa {
+public class Mesa implements Servicio, PrototypeMesa {
     boolean Ocupado;
     ArrayList<DatosReserva> reservas;
     String tipo;
@@ -35,7 +35,7 @@ public class Mesa implements Servicio,PrototypeMesa {
 
     @Override
     public PrototypeMesa clone() {
-        return null;
+        return new Mesa(this.tipo, this.precio);
     }
 
 
