@@ -1,13 +1,13 @@
 package ServicioRestaurante;
 
-import auxClasses.DatosReserva;
+import ServicioHabitaciones.DatosReservaHabitacion;
 import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
 public abstract class Mesa implements Servicio, PrototypeMesa {
     private boolean Ocupado;
-    ArrayList<DatosReserva> reservas;
+    private ArrayList<DatosReservaHabitacion> reservas = new ArrayList<DatosReservaHabitacion>();
     String tipo;
      Float precio;
     public Mesa(String tipo, Float precio) {
@@ -23,9 +23,9 @@ public abstract class Mesa implements Servicio, PrototypeMesa {
         this.Ocupado = estaOcupado;
     }
 
-    public void addReserva(DatosReserva reserva){
+    public void addReserva(DatosReservaHabitacion reserva){
         reservas.add(reserva);
-        System.out.println("se esta reservando mesa para: " + reserva.toString());
+        System.out.println("se esta reservando mesa para:\n " + reserva.toString());
     }
 
     @Override

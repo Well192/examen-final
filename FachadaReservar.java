@@ -17,15 +17,15 @@ public class FachadaReservar {
     public void hacerReserva(String nombre, String apellido, Date fecha, float numero, Servicio servicio){
 
         if(servicio instanceof Habitacion){
-            habitaciones.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
+            habitaciones.hacerReserva(nombre, apellido, fecha, (Habitacion) servicio, (int) numero);
         }
 
         if(servicio instanceof EspacioEstacionamiento){
-            estacionamiento.hacerReserva(nombre, apellido, fecha, servicio, numero);
+            estacionamiento.hacerReserva(nombre, apellido, fecha, (EspacioEstacionamiento) servicio, numero);
         }
 
         if(servicio instanceof Mesa){
-            mesas.hacerReserva(nombre, apellido, fecha, servicio, (int) numero);
+            mesas.hacerReserva(nombre, apellido, fecha, (Mesa) servicio, (int) numero);
         }
     }
 

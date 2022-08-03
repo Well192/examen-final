@@ -8,7 +8,7 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
     private Float precio;
     private String tamano;
     private boolean Ocupado;
-    private ArrayList<DatosReservaEstacionamiento> reservas;
+    private ArrayList<DatosReservaEstacionamiento> reservas = new ArrayList<>();
     public EspacioEstacionamiento(String tamano, Float precio) {
         this.tamano = tamano;
         this.precio = precio;
@@ -21,7 +21,7 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
     }
     public void addReserva(DatosReservaEstacionamiento reserva){
         reservas.add(reserva);
-        System.out.println("esta reservado estacionamiento para : " + reserva.toString());
+        System.out.println("esta reservado estacionamiento para :\n " + reserva.toString());
     }
     @Override
     public String tamano() {

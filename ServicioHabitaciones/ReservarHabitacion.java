@@ -7,9 +7,9 @@ import java.util.Date;
 
 public class ReservarHabitacion{
 
-    public void hacerReserva(String Nombre, String Apellido, Date fecha, Servicio habitacion, int numDias) {
+    public void hacerReserva(String Nombre, String Apellido, Date fecha, Habitacion habitacion, int numDias) {
         assert false;
-        habitacion.reservas.add(new DatosReservaHabitacion(Nombre, Apellido, fecha, numDias));
-        habitacion.reservas.get(habitacion.reservas.size()).toString();
+        DatosReservaHabitacion reserva = new DatosReservaHabitacion(Nombre, Apellido, fecha, numDias);
+        habitacion.addReserva(reserva);
     }
 }

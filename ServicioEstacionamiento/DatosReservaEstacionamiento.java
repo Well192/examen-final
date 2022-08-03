@@ -12,4 +12,11 @@ public class DatosReservaEstacionamiento extends DatosReserva {
         super(nombre, apellido, fecha);
         this.tiempo = tiempo;
     }
+
+    @Override
+    public String toString() {
+        return "nombre: " + super.getNombre() + ", Apellido: " + super.getApellido()  + ", para el dia: " + super.getFecha() +
+                ", para: " + tiempo +" horas";
+    }
+
 }
