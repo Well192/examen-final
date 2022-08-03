@@ -5,6 +5,13 @@ public class HabitacionEconomica extends Habitacion implements BeneficioHabitaci
         super(precio);
         super.type = "economica";
     }
+
+    @Override
+    void addReserva(DatosReservaHabitacion reserva) {
+        reservas.add(reserva);
+        System.out.println("Se hizo la reserva de la habitacion economica para:\n" + reserva.toString());
+    }
+
     @Override
     public String getType() {
         return type;

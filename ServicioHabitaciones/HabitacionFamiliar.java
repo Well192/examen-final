@@ -5,6 +5,13 @@ public class HabitacionFamiliar extends Habitacion implements BeneficioHabitacio
         super(precio);
         super.type = "familiar";
     }
+
+    @Override
+    void addReserva(DatosReservaHabitacion reserva) {
+        reservas.add(reserva);
+        System.out.println("Se hizo la reserva de la habitacion familiar para:\n" + reserva.toString());
+    }
+
     @Override
     public String getType() {
         return type;

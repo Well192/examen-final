@@ -21,7 +21,7 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
     }
     public void addReserva(DatosReservaEstacionamiento reserva){
         reservas.add(reserva);
-        System.out.println("esta reservado estacionamiento para :\n " + reserva.toString());
+        System.out.println("esta reservado estacionamiento" + this.tamano + "para :\n " + reserva.toString());
     }
     @Override
     public String tamano() {

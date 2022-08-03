@@ -11,7 +11,7 @@ public abstract class Habitacion implements PrototypeHabitacion, Servicio {
     boolean esOcupado = false;
     String type;
 
-    private ArrayList<DatosReservaHabitacion> reservas = new ArrayList<>();
+    protected ArrayList<DatosReservaHabitacion> reservas = new ArrayList<>();
 
     public void setEsOcupado(boolean esOcupado) {
         this.esOcupado = esOcupado;
@@ -21,10 +21,7 @@ public abstract class Habitacion implements PrototypeHabitacion, Servicio {
         this.precio = precio;
     }
 
-    public void addReserva(DatosReservaHabitacion reserva){
-        reservas.add(reserva);
-        System.out.println("Se hizo la reserva de la habitacion para:\n" + reserva.toString());
-    }
+    abstract void addReserva(DatosReservaHabitacion reserva);
 
     public abstract PrototypeHabitacion clone();
 
