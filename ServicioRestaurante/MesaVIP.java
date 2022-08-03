@@ -4,8 +4,10 @@ public class MesaVIP extends Mesa implements BeneficioRestaurante{
     public MesaVIP(String tipo, Float precio) {
         super(tipo, precio);
     }
-    public String getType() {
-        return tipo;
+
+    @Override
+    public PrototypeMesa clone() {
+        return new MesaVIP(this.tipo, this.precio);
     }
 
     @Override

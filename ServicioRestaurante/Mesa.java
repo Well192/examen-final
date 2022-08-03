@@ -5,11 +5,11 @@ import auxClasses.Servicio;
 
 import java.util.ArrayList;
 
-public class Mesa implements Servicio, PrototypeMesa {
-    boolean Ocupado;
+public abstract class Mesa implements Servicio, PrototypeMesa {
+    private boolean Ocupado;
     ArrayList<DatosReserva> reservas;
     String tipo;
-    Float precio;
+     Float precio;
     public Mesa(String tipo, Float precio) {
         this.tipo = tipo;
         this.precio = precio;
@@ -34,9 +34,7 @@ public class Mesa implements Servicio, PrototypeMesa {
     }
 
     @Override
-    public PrototypeMesa clone() {
-        return new Mesa(this.tipo, this.precio);
-    }
+    public abstract PrototypeMesa clone();
 
 
 }

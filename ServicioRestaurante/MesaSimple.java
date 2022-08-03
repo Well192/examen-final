@@ -9,8 +9,8 @@ public class MesaSimple extends Mesa implements  BeneficioRestaurante{
         return tipo;
     }
 
-    public Mesa clone(){
-        return new Mesa(this.tipo,this.precio);
+    public PrototypeMesa clone(){
+        return new MesaSimple(this.tipo,this.precio);
     }
 
 

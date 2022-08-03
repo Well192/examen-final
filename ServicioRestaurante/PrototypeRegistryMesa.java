@@ -6,9 +6,9 @@ public class PrototypeRegistryMesa {
     private final HashMap<String, PrototypeMesa> mesas = new HashMap<>();
 
     public PrototypeRegistryMesa() {
-        Mesa mesaPequeno = new Mesa("pequeno", 50.0F);
-        Mesa mesaGrande = new Mesa("grande", 100.0F);
-        Mesa mesaPrivada= new Mesa("privada", 200.0F);
+        MesaSimple mesaPequeno = new MesaSimple("pequeno", 50.0F);
+        MesaSimple mesaGrande = new MesaSimple("grande", 100.0F);
+        MesaVIP mesaPrivada= new MesaVIP("vip", 200.0F);
 
         mesas.put("pequeno", mesaPequeno);
         mesas.put("grande", mesaGrande);

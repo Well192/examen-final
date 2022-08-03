@@ -12,7 +12,7 @@ public class HabitacionNormal extends Habitacion implements BeneficioHabitacion 
     }
 
     @Override
-    public Habitacion clone() {
+    public PrototypeHabitacion clone() {
         return new HabitacionNormal(this.precio);
     }
 
