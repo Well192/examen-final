@@ -23,7 +23,7 @@ public class HabitacionEconomica extends Habitacion implements BeneficioHabitaci
     }
 
     @Override
-    public void accept(VisitorHabitacion v) {
-        v.visitEconomic(this);
+    public String accept(VisitorHabitacion v) {
+        return v.visitEconomic(this);
     }
 }

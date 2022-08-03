@@ -1,25 +1,20 @@
 package ServicioHabitaciones;
-
 public class BrindarBeneficioHabitacion implements VisitorHabitacion {
 
     @Override
-    public void visitEconomic(HabitacionEconomica he) {
-        System.out.println("este es un servicio economico");
+    public String visitEconomic(HabitacionEconomica he) {
+        return "No tiene beneficios";
     }
-
     @Override
-    public void visitNormal(HabitacionNormal hn) {
-        System.out.println("este es un servicio normal");
+    public String visitNormal(HabitacionNormal hn) {
+        return "Tendrá servicio a habitacion gratis un dia";
     }
-
     @Override
-    public void visitPremium(HabitacionPremium hp) {
-        System.out.println("este es un servicio premium");
+    public String visitPremium(HabitacionPremium hp) {
+        return "Tendrá servicio a habitación gratis cinco días";
     }
-
     @Override
-    public void visitFamiliar(HabitacionFamiliar hf) {
-        System.out.println("este es un servicio familiar");
+    public String visitFamiliar(HabitacionFamiliar hf) {
+        return "Tendrá servicio a habitación gratis tres días";
     }
-
 }

@@ -23,7 +23,7 @@ public class HabitacionPremium extends Habitacion implements BeneficioHabitacion
     }
 
     @Override
-    public void accept(VisitorHabitacion v) {
-        v.visitPremium(this);
+    public String accept(VisitorHabitacion v) {
+        return v.visitPremium(this);
     }
 }
