@@ -1,8 +1,4 @@
 package ServicioHabitaciones;
-
-import auxClasses.DatosReserva;
-import auxClasses.Servicio;
-
 import java.util.Date;
 
 public class ReservarHabitacion{

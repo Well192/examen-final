@@ -1,7 +1,5 @@
 package ServicioRestaurante;
 
-import ServicioHabitaciones.DatosReservaHabitacion;
-
 public class MesaSimple extends Mesa implements  BeneficioRestaurante{
 
     public MesaSimple(String tipo, Float precio) {
@@ -21,7 +19,6 @@ public class MesaSimple extends Mesa implements  BeneficioRestaurante{
     public PrototypeMesa clone(){
         return new MesaSimple(this.tipo,this.precio);
     }
-
 
     @Override
     public String accept(VisitorRestaurante v) {

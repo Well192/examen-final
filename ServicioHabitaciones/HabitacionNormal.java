@@ -22,7 +22,6 @@ public class HabitacionNormal extends Habitacion implements BeneficioHabitacion 
         return new HabitacionNormal(this.precio);
     }
 
-
     @Override
     public String accept(VisitorHabitacion v) {
         return v.visitNormal(this);

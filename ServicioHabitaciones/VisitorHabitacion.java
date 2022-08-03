@@ -1,6 +1,6 @@
 package ServicioHabitaciones;
 
-public interface VisitorHabitacion {
+public interface VisitorHabitacion{
 
     String visitEconomic(HabitacionEconomica he);
     String visitNormal(HabitacionNormal hn);
