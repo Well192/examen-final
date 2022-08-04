@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="HotelDescription">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.HotelDescription">
   <grid id="cbd77" binding="contentPane" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
       <xy x="48" y="54" width="857" height="575"/>
@@ -17,7 +17,9 @@
           <minimumSize width="600" height="500"/>
           <preferredSize width="600" height="400"/>
         </properties>
-        <border type="none" title="Hotel" title-justification="2"/>
+        <border type="none" title="Hotel" title-justification="2">
+          <font name="Lucida Handwriting" size="20"/>
+        </border>
         <children>
           <component id="9bb82" class="javax.swing.JLabel" binding="labelDireccion">
             <constraints/>
@@ -28,7 +30,7 @@
               <opaque value="false"/>
               <preferredSize width="500" height="20"/>
               <requestFocusEnabled value="false"/>
-              <text value="Direccion:"/>
+              <text value="Direccion: Av. Túpac Amaru 210, Rímac 15333"/>
               <verifyInputWhenFocusTarget value="true"/>
               <verticalAlignment value="0"/>
             </properties>

@@ -1,7 +1,8 @@
+package auxClasses;
+
 import ServicioEstacionamiento.PrototypeRegistryEstacionamiento;
 import ServicioHabitaciones.PrototypeRegistryHabitacion;
 import ServicioRestaurante.PrototypeRegistryMesa;
-import auxClasses.Servicio;
 
 import java.util.Date;
 

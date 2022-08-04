@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.ReservaHabitacionesGUI">
+  <grid id="27dc6" binding="contentPane" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="534" height="496"/>
+    </constraints>
+    <properties>
+      <preferredSize width="600" height="500"/>
+    </properties>
+    <border type="none" title="Reservas Habitaciones" title-justification="2">
+      <font name="Lucida Handwriting" size="20"/>
+    </border>
+    <children>
+      <grid id="f43a0" binding="panelHabNormal" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <preferredSize width="500" height="100"/>
+        </properties>
+        <border type="none" title="Habitaciones Normales"/>
+        <children/>
+      </grid>
+      <grid id="11656" binding="panelHabEconomica" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <preferredSize width="500" height="100"/>
+        </properties>
+        <border type="none" title="Habitaciones Economicas"/>
+        <children/>
+      </grid>
+      <grid id="214fa" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <preferredSize width="500" height="100"/>
+        </properties>
+        <border type="none" title="Habitaciones Familiar"/>
+        <children/>
+      </grid>
+      <grid id="fcdee" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <preferredSize width="500" height="100"/>
+        </properties>
+        <border type="none" title="Habitaciones Premiun"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>

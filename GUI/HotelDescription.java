@@ -1,4 +1,8 @@
+package GUI;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class HotelDescription extends JDialog {
     private JPanel contentPane;
@@ -19,16 +23,26 @@ public class HotelDescription extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        siguienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        opinarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public static void main(String[] args) {
         HotelDescription dialog = new HotelDescription();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
+        dialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
+
 }

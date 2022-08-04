@@ -1,3 +1,5 @@
+package auxClasses;
+
 import ServicioEstacionamiento.EspacioEstacionamiento;
 import ServicioEstacionamiento.ReservarEstacionamiento;
 import ServicioHabitaciones.Habitacion;
