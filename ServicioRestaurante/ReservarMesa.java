@@ -1,11 +1,13 @@
 package ServicioRestaurante;
 
+import auxClasses.Cliente;
+
 import java.util.Date;
 
 public class ReservarMesa {
 
-    public void hacerReserva(String Nombre, String Apellido, Date fecha, Mesa mesa, int numPersonas) {
-        DatosReservaMesa reserva = new DatosReservaMesa(Nombre, Apellido, fecha, numPersonas);
+    public void hacerReserva(Cliente cliente, Date fecha, Mesa mesa, int numPersonas) {
+        DatosReservaMesa reserva = new DatosReservaMesa(cliente, fecha, numPersonas);
         mesa.addReserva(reserva);
     }
 }

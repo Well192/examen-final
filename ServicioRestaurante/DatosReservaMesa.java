@@ -1,19 +1,20 @@
 package ServicioRestaurante;
 
+import auxClasses.Cliente;
 import auxClasses.DatosReserva;
 import java.util.Date;
 
 public class DatosReservaMesa extends DatosReserva {
     int numPersonas;
 
-    public DatosReservaMesa(String nombre, String apellido, Date fecha, int numPersonas) {
-        super(nombre, apellido, fecha);
+    public DatosReservaMesa(Cliente cliente, Date fecha, int numPersonas) {
+        super(cliente, fecha);
         this.numPersonas = numPersonas;
     }
 
     @Override
     public String toString() {
-        return "nombre: " + super.getNombre() + ", Apellido: " + super.getApellido()  + ", para el dia: " + super.getFecha() +
+        return "nombre: " + getCliente().getNombre() + ", Apellido: " + getCliente().getApellido()  + ", para el dia: " + super.getFecha() +
                 ", para: " + numPersonas +" personas";
     }
 

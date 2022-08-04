@@ -3,42 +3,24 @@ package auxClasses;
 import java.util.Date;
 
 public class DatosReserva {
-    private String nombre;
-    private String apellido;
-    private Date fecha;
+    private final Cliente cliente;
+    private final Date fecha;
 
-    public DatosReserva(String nombre, String apellido, Date fecha) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public DatosReserva(Cliente cliente, Date fecha) {
+        this.cliente = cliente;
         this.fecha = fecha;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     @Override
     public String toString() {
-        return "Nombre: " + nombre + ", Apellido: " + apellido + ", fecha:" + fecha;
+        return "Nombre: " + getCliente().getNombre() + ", Apellido: " + getCliente().getApellido() + ", fecha:" + fecha;
     }
 }
