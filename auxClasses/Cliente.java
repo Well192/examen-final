@@ -1,6 +1,7 @@
 package auxClasses;
 
 import ServicioEstacionamiento.PrototypeRegistryEstacionamiento;
+import ServicioHabitaciones.HabitacionEconomica;
 import ServicioHabitaciones.PrototypeRegistryHabitacion;
 import ServicioRestaurante.PrototypeRegistryMesa;
 
@@ -41,6 +42,7 @@ public class Cliente {
         //reserva los 3 servicios a traves de la fachada mas caros para hoy
         fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 2f,(Servicio) habitacion.get("Familiar"));
         fachada.hacerReserva(uno.nombre, uno.apellido,fechaActual, 2f,(Servicio) habitacion.get("Normal"));
+
     }
 
 }

@@ -1,4 +1,4 @@
 package ServicioHabitaciones;
 public interface BeneficioHabitacion {
-    String accept(VisitorHabitacion v);
+    String accept(VisitorHabitacion visitorHabitacion);
 }

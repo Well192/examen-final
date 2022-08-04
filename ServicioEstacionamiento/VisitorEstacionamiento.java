@@ -1,5 +1,5 @@
 package ServicioEstacionamiento;
 
 public interface VisitorEstacionamiento {
-    String visitEspacioEstacionamiento(EspacioEstacionamiento ee);
+    String visitEspacioEstacionamiento(EspacioEstacionamiento espacioEstacionamiento);
 }

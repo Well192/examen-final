@@ -8,6 +8,7 @@ public abstract class Habitacion implements PrototypeHabitacion, Servicio {
     float precio;
     boolean esOcupado = false;
     String type;
+
     protected ArrayList<DatosReservaHabitacion> reservas = new ArrayList<>();
 
     public void setEsOcupado(boolean esOcupado) {

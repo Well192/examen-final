@@ -2,8 +2,8 @@ package ServicioHabitaciones;
 
 public interface VisitorHabitacion{
 
-    String visitEconomic(HabitacionEconomica he);
-    String visitNormal(HabitacionNormal hn);
-    String visitPremium(HabitacionPremium hp);
-    String visitFamiliar(HabitacionFamiliar hf);
+    String visitEconomic(HabitacionEconomica habitacionEconomica);
+    String visitNormal(HabitacionNormal habitacionNormal);
+    String visitPremium(HabitacionPremium habitacionPremium);
+    String visitFamiliar(HabitacionFamiliar habitacionFamiliar);
 }

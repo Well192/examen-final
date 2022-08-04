@@ -4,10 +4,11 @@ import auxClasses.Servicio;
 import java.util.ArrayList;
 
 public abstract class Mesa implements Servicio, PrototypeMesa {
+    String tipo;
+    Float precio;
     private boolean Ocupado;
     protected ArrayList<DatosReservaMesa> reservas = new ArrayList<>();
-    String tipo;
-     Float precio;
+
     public Mesa(String tipo, Float precio) {
         this.tipo = tipo;
         this.precio = precio;

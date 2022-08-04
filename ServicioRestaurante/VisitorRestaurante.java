@@ -2,6 +2,6 @@ package ServicioRestaurante;
 
 public interface VisitorRestaurante {
 
-    String visitMesaSimple(MesaSimple ms);
-    String visitMesaVIP(MesaVIP mvip);
+    String visitMesaSimple(MesaSimple mesaSimple);
+    String visitMesaVIP(MesaVIP mesaVIP);
 }
