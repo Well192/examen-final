@@ -7,9 +7,13 @@ public class ReservaHabitacionesGUI extends JFrame {
     private JPanel contentPane;
     private JPanel panelHabNormal;
     private JPanel panelHabEconomica;
+    private JButton botonSiguiente;
+    private JButton reservarButton;
+    private JTextField inserteNumeroDeDiasTextField;
 
     public ReservaHabitacionesGUI(){
         setContentPane(contentPane);
+        setSize(600,610);
     }
 
     public static void main(String[] args) {

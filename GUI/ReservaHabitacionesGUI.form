@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.ReservaHabitacionesGUI">
   <grid id="27dc6" binding="contentPane" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
-      <xy x="20" y="20" width="534" height="496"/>
+      <xy x="20" y="52" width="1452" height="464"/>
     </constraints>
     <properties>
       <preferredSize width="600" height="500"/>
@@ -14,35 +14,121 @@
       <grid id="f43a0" binding="panelHabNormal" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
-          <preferredSize width="500" height="100"/>
+          <preferredSize width="500" height="120"/>
         </properties>
         <border type="none" title="Habitaciones Normales"/>
-        <children/>
+        <children>
+          <component id="c2b0e" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="350" height="50"/>
+              <text value="Este tipo de habitacion contiene:"/>
+            </properties>
+          </component>
+          <component id="384ef" class="javax.swing.JTextField" binding="inserteNumeroDeDiasTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="inserte numero de dias"/>
+            </properties>
+          </component>
+          <component id="83990" class="javax.swing.JButton" binding="reservarButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Reservar"/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <grid id="11656" binding="panelHabEconomica" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
-          <preferredSize width="500" height="100"/>
+          <preferredSize width="500" height="120"/>
         </properties>
         <border type="none" title="Habitaciones Economicas"/>
-        <children/>
+        <children>
+          <component id="b7047" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="350" height="50"/>
+              <text value="Este tipo de habitacion contiene:"/>
+            </properties>
+          </component>
+          <component id="87830" class="javax.swing.JTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="inserte numero de dias"/>
+            </properties>
+          </component>
+          <component id="ac73a" class="javax.swing.JButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Reservar"/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <grid id="214fa" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
-          <preferredSize width="500" height="100"/>
+          <preferredSize width="500" height="120"/>
         </properties>
         <border type="none" title="Habitaciones Familiar"/>
-        <children/>
+        <children>
+          <component id="dfc1d" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="350" height="50"/>
+              <text value="Este tipo de habitacion contiene:"/>
+            </properties>
+          </component>
+          <component id="e3fe8" class="javax.swing.JTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="inserte numero de dias"/>
+            </properties>
+          </component>
+          <component id="b5ef0" class="javax.swing.JButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Reservar"/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <grid id="fcdee" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
-          <preferredSize width="500" height="100"/>
+          <preferredSize width="500" height="120"/>
         </properties>
         <border type="none" title="Habitaciones Premiun"/>
-        <children/>
+        <children>
+          <component id="17f03" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="350" height="50"/>
+              <text value="Este tipo de habitacion contiene:"/>
+            </properties>
+          </component>
+          <component id="4ee47" class="javax.swing.JTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="inserte numero de dias"/>
+            </properties>
+          </component>
+          <component id="e3306" class="javax.swing.JButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Reservar"/>
+            </properties>
+          </component>
+        </children>
       </grid>
+      <component id="fc116" class="javax.swing.JButton" binding="botonSiguiente">
+        <constraints/>
+        <properties>
+          <text value="Siguiente"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
