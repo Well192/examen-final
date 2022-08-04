@@ -26,6 +26,29 @@ public class HotelDescription extends JDialog {
         siguienteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                int continua = 0;
+
+                if(!(estacionamientoCheckBox.isSelected() || restauranteCheckBox.isSelected() || habitacionesCheckBox.isSelected())){
+                    JOptionPane.showMessageDialog(null,"Seleccione un servicio");
+                    return;
+                }
+
+                if(habitacionesCheckBox.isSelected()){
+                    ReservaHabitacionesGUI habitacionesGUI = new ReservaHabitacionesGUI();
+                    habitacionesGUI.setVisible(true);
+                }
+
+                if(estacionamientoCheckBox.isSelected()){
+                    ReservarEstacionamiento estacionamiento = new ReservarEstacionamiento();
+                    estacionamiento.setVisible(true);
+                }
+
+                if(restauranteCheckBox.isSelected()){
+                    ReservarMesaGUI mesaGUI = new ReservarMesaGUI();
+                    mesaGUI.setVisible(true);
+                }
+
+                dispose();
 
             }
         });
@@ -41,7 +64,7 @@ public class HotelDescription extends JDialog {
         HotelDescription dialog = new HotelDescription();
         dialog.pack();
         dialog.setVisible(true);
-        dialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        dialog.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
 
