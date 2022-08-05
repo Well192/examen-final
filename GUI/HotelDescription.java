@@ -1,8 +1,10 @@
 package GUI;
 
+import auxClasses.Cliente;
+import auxClasses.Verificador;
+
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class HotelDescription extends JDialog {
     private JPanel contentPane;
@@ -17,45 +19,65 @@ public class HotelDescription extends JDialog {
     private JTextPane textPane1;
     private JCheckBox restauranteCheckBox;
     private JCheckBox habitacionesCheckBox;
-    private JButton buttonOK;
+    private JTextField ingreseNombreDelClienteTextField;
+    private JTextField ingreseApellidoDelClienteTextField;
+    private JTextField ingreseDNIDelClienteTextField;
+    Cliente cliente = null;
 
     public HotelDescription() {
         setContentPane(contentPane);
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
-        siguienteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int continua = 0;
+        siguienteButton.addActionListener(e -> {
+            if(!(estacionamientoCheckBox.isSelected() || restauranteCheckBox.isSelected() || habitacionesCheckBox.isSelected())){
+                JOptionPane.showMessageDialog(null,"Seleccione un servicio");
+                return;
+            }
 
-                if(!(estacionamientoCheckBox.isSelected() || restauranteCheckBox.isSelected() || habitacionesCheckBox.isSelected())){
-                    JOptionPane.showMessageDialog(null,"Seleccione un servicio");
+            if (Verificador.esPalabra(ingreseNombreDelClienteTextField.getText()) &&
+                    Verificador.esPalabra(ingreseApellidoDelClienteTextField.getText())) {
+                if (Verificador.esNumero(ingreseDNIDelClienteTextField.getText())){
+                    cliente = new Cliente(ingreseNombreDelClienteTextField.getText(),
+                            ingreseApellidoDelClienteTextField.getText(),
+                            ingreseDNIDelClienteTextField.getText());
+                }else {
+                    JOptionPane.showMessageDialog(null,"el DNI tiene que ser numero");
                     return;
                 }
+            }else{
+                JOptionPane.showMessageDialog(null,"ingrese sus datos");
+                return;
+            }
 
-                if(habitacionesCheckBox.isSelected()){
-                    ReservaHabitacionesGUI habitacionesGUI = new ReservaHabitacionesGUI();
-                    habitacionesGUI.setVisible(true);
-                }
+            if(habitacionesCheckBox.isSelected()){
+                ReservaHabitacionesGUI habitacionesGUI = new ReservaHabitacionesGUI(estacionamientoCheckBox.isSelected(), restauranteCheckBox.isSelected(), cliente);
+                habitacionesGUI.setVisible(true);
+            }else if(estacionamientoCheckBox.isSelected()){
+                ReservarEstacionamiento estacionamiento = new ReservarEstacionamiento(restauranteCheckBox.isSelected(), cliente);
+                estacionamiento.setVisible(true);
+            }else if(restauranteCheckBox.isSelected()){
+                ReservarMesaGUI mesaGUI = new ReservarMesaGUI(cliente);
+                mesaGUI.setVisible(true);
+            }
 
-                if(estacionamientoCheckBox.isSelected()){
-                    ReservarEstacionamiento estacionamiento = new ReservarEstacionamiento();
-                    estacionamiento.setVisible(true);
-                }
-
-                if(restauranteCheckBox.isSelected()){
-                    ReservarMesaGUI mesaGUI = new ReservarMesaGUI();
-                    mesaGUI.setVisible(true);
-                }
-
-                dispose();
-
+            dispose();
+        });
+        ingreseNombreDelClienteTextField.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ingreseNombreDelClienteTextField.setText("");
             }
         });
-        opinarButton.addActionListener(new ActionListener() {
+        ingreseApellidoDelClienteTextField.addMouseListener(new MouseAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void mouseClicked(MouseEvent e) {
+                ingreseApellidoDelClienteTextField.setText("");
+            }
+        });
 
+        ingreseDNIDelClienteTextField.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ingreseDNIDelClienteTextField.setText("");
             }
         });
     }

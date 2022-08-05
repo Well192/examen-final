@@ -1,5 +1,7 @@
 package ServicioHabitaciones;
 
+import javax.swing.*;
+
 public class HabitacionEconomica extends Habitacion implements BeneficioHabitacion {
     public HabitacionEconomica(float precio) {
         super(precio);
@@ -10,6 +12,8 @@ public class HabitacionEconomica extends Habitacion implements BeneficioHabitaci
     void addReserva(DatosReservaHabitacion reserva) {
         reservas.add(reserva);
         System.out.println("Se hizo la reserva de la habitacion economica para:\n" + reserva.toString());
+        JOptionPane.showMessageDialog(null,
+                "Se hizo la reserva de la habitacion economica para:\n" + reserva.toString());
     }
 
     @Override

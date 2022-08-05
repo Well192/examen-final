@@ -1,5 +1,7 @@
 package ServicioHabitaciones;
 
+import javax.swing.*;
+
 public class HabitacionNormal extends Habitacion implements BeneficioHabitacion {
 
     public HabitacionNormal(float precio) {
@@ -11,6 +13,8 @@ public class HabitacionNormal extends Habitacion implements BeneficioHabitacion 
     void addReserva(DatosReservaHabitacion reserva) {
         reservas.add(reserva);
         System.out.println("Se hizo la reserva de la habitacion normal para:\n" + reserva.toString());
+        JOptionPane.showMessageDialog(null,
+                "Se hizo la reserva de la habitacion normal para:\n" + reserva.toString());
     }
 
     public String getType() {

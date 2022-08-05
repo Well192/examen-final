@@ -25,7 +25,7 @@
               <text value="Este tipo de habitacion contiene:"/>
             </properties>
           </component>
-          <component id="384ef" class="javax.swing.JTextField" binding="textField1">
+          <component id="384ef" class="javax.swing.JTextField" binding="nroDiasNormal">
             <constraints/>
             <properties>
               <text value="inserte numero de dias"/>
@@ -53,7 +53,7 @@
               <text value="Este tipo de habitacion contiene:"/>
             </properties>
           </component>
-          <component id="87830" class="javax.swing.JTextField" binding="textField2">
+          <component id="87830" class="javax.swing.JTextField" binding="nroDiasEconomico">
             <constraints/>
             <properties>
               <text value="inserte numero de dias"/>
@@ -81,7 +81,7 @@
               <text value="Este tipo de habitacion contiene:"/>
             </properties>
           </component>
-          <component id="e3fe8" class="javax.swing.JTextField" binding="textField3">
+          <component id="e3fe8" class="javax.swing.JTextField" binding="nroDiasFamiliar">
             <constraints/>
             <properties>
               <text value="inserte numero de dias"/>
@@ -109,7 +109,7 @@
               <text value="Este tipo de habitacion contiene:"/>
             </properties>
           </component>
-          <component id="4ee47" class="javax.swing.JTextField" binding="textField4">
+          <component id="4ee47" class="javax.swing.JTextField" binding="nroDiasPremiun">
             <constraints/>
             <properties>
               <text value="inserte numero de dias"/>

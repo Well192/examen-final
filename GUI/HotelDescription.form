@@ -6,7 +6,7 @@
     </constraints>
     <properties>
       <minimumSize width="500" height="87"/>
-      <preferredSize width="600" height="400"/>
+      <preferredSize width="600" height="500"/>
       <requestFocusEnabled value="false"/>
     </properties>
     <border type="none"/>
@@ -60,6 +60,12 @@
               <text value="Opiniones:"/>
             </properties>
           </component>
+          <component id="a4be8" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Ingrese nombre del cliente: "/>
+            </properties>
+          </component>
           <component id="bb359" class="javax.swing.JToolBar$Separator">
             <constraints/>
             <properties/>
@@ -67,6 +73,57 @@
           <component id="992f5" class="javax.swing.JToolBar$Separator">
             <constraints/>
             <properties/>
+          </component>
+          <component id="8c01c" class="javax.swing.JTextField" binding="ingreseNombreDelClienteTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Ingrese nombre del cliente"/>
+            </properties>
+          </component>
+          <component id="39194" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="200" height="30"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="88193" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="ingrese el apellido del cliente:"/>
+            </properties>
+          </component>
+          <component id="59d1d" class="javax.swing.JTextField" binding="ingreseApellidoDelClienteTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Ingrese apellido del cliente"/>
+            </properties>
+          </component>
+          <component id="4524c" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="200" height="30"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="77d38" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Ingrese DNI del cliente"/>
+            </properties>
+          </component>
+          <component id="a18d2" class="javax.swing.JTextField" binding="ingreseDNIDelClienteTextField" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Ingrese DNI del cliente"/>
+            </properties>
+          </component>
+          <component id="48921" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="200" height="30"/>
+              <text value=""/>
+            </properties>
           </component>
           <component id="e9776" class="javax.swing.JLabel">
             <constraints/>
