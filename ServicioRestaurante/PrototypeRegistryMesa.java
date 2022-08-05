@@ -8,11 +8,14 @@ public class PrototypeRegistryMesa {
     public PrototypeRegistryMesa() {
         MesaSimple mesaPequeno = new MesaSimple("pequeno", 50.0F);
         MesaSimple mesaGrande = new MesaSimple("grande", 100.0F);
-        MesaVIP mesaPrivada= new MesaVIP("vip", 200.0F);
+        MesaVIP mesaPrivadaGrande= new MesaVIP("vipGrande", 200.0F);
+        MesaVIP mesaPrivadaPequena= new MesaVIP("vipPequeno", 200.0F);
 
         mesas.put("pequeno", mesaPequeno);
         mesas.put("grande", mesaGrande);
-        mesas.put("privada", mesaPrivada);
+        mesas.put("vipGrande", mesaPrivadaGrande);
+        mesas.put("vipPequeno", mesaPrivadaPequena);
+
     }
     public PrototypeMesa get(String key){
         return mesas.get(key).clone();

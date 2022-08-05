@@ -47,7 +47,7 @@ public class Cliente {
         //reserva los 3 servicios a traves de la fachada mas caros para hoy
         fachada.hacerReserva(uno,fechaActual, 2f,(Servicio) habitacion.get("Premium"));
         fachada.hacerReserva(uno,fechaActual, 12f,(Servicio) estacionamiento.get("grande"));
-        fachada.hacerReserva(uno,fechaActual, 4f,(Servicio) mesa.get("privada"));
+        fachada.hacerReserva(uno,fechaActual, 4f,(Servicio) mesa.get("vipGrande"));
 
         System.out.println("\n\nReservando los otros tipos de habitaciones -----------------------------------------------------");
         //reserva los 3 servicios a traves de la fachada mas caros para hoy

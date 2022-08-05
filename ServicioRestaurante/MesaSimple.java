@@ -1,5 +1,7 @@
 package ServicioRestaurante;
 
+import javax.swing.*;
+
 public class MesaSimple extends Mesa implements  BeneficioRestaurante{
 
     public MesaSimple(String tipo, Float precio) {
@@ -9,7 +11,9 @@ public class MesaSimple extends Mesa implements  BeneficioRestaurante{
     @Override
     void addReserva(DatosReservaMesa reserva) {
         super.reservas.add(reserva);
-        System.out.println("se esta reservando una mesa " + this.getType() + " simple para:\n " + reserva.toString());
+        System.out.println("se esta reservando una simple " + this.getType() + " para:\n " + reserva.toString());
+        JOptionPane.showMessageDialog(null,
+                "se esta reservando mesa simple " + this.getType() + " para:\n " + reserva.toString());
     }
 
     public String getType() {

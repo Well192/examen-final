@@ -11,7 +11,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="e3588" binding="panelHotel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="e3588" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints border-constraint="Center"/>
         <properties>
           <minimumSize width="600" height="500"/>
@@ -21,7 +21,7 @@
           <font name="Lucida Handwriting" size="20"/>
         </border>
         <children>
-          <component id="9bb82" class="javax.swing.JLabel" binding="labelDireccion">
+          <component id="9bb82" class="javax.swing.JLabel">
             <constraints/>
             <properties>
               <alignmentX value="0.5"/>
@@ -35,7 +35,7 @@
               <verticalAlignment value="0"/>
             </properties>
           </component>
-          <component id="f19b" class="javax.swing.JLabel" binding="labelDescription">
+          <component id="f19b" class="javax.swing.JLabel">
             <constraints/>
             <properties>
               <preferredSize width="500" height="40"/>

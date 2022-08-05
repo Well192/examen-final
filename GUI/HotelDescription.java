@@ -1,20 +1,16 @@
 package GUI;
 
 import auxClasses.Cliente;
-import auxClasses.Verificador;
 
 import javax.swing.*;
 import java.awt.event.*;
 
 public class HotelDescription extends JDialog {
     private JPanel contentPane;
-    private JPanel panelHotel;
     private JTextArea textAreaOpiniones;
-    private JLabel labelDireccion;
     private JLabel labelFoto;
     private JButton siguienteButton;
     private JButton opinarButton;
-    private JLabel labelDescription;
     private JCheckBox estacionamientoCheckBox;
     private JTextPane textPane1;
     private JCheckBox restauranteCheckBox;
@@ -27,6 +23,7 @@ public class HotelDescription extends JDialog {
     public HotelDescription() {
         setContentPane(contentPane);
         setModal(true);
+        setSize(600,500);
         siguienteButton.addActionListener(e -> {
             if(!(estacionamientoCheckBox.isSelected() || restauranteCheckBox.isSelected() || habitacionesCheckBox.isSelected())){
                 JOptionPane.showMessageDialog(null,"Seleccione un servicio");

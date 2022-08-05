@@ -4,11 +4,8 @@ import ServicioHabitaciones.PrototypeRegistryHabitacion;
 import auxClasses.Cliente;
 import auxClasses.FachadaReservar;
 import auxClasses.Servicio;
-import auxClasses.Verificador;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Date;
@@ -22,8 +19,6 @@ public class ReservaHabitacionesGUI extends JFrame {
     Cliente cliente;
 
     private JPanel contentPane;
-    private JPanel panelHabNormal;
-    private JPanel panelHabEconomica;
     private JButton botonSiguiente;
     private JTextField nroDiasNormal;
     private JTextField nroDiasEconomico;
@@ -71,7 +66,6 @@ public class ReservaHabitacionesGUI extends JFrame {
                 fachada.hacerReserva(cliente , fechaActual, Float.parseFloat(nroDiasNormal.getText()), (Servicio) habitacion.get("Normal"));
             }else{
                 JOptionPane.showMessageDialog(null,"los dias tienen que estar en digitos");
-                return;
             }
         });
 
@@ -80,7 +74,6 @@ public class ReservaHabitacionesGUI extends JFrame {
                 fachada.hacerReserva(cliente , fechaActual, Float.parseFloat(nroDiasEconomico.getText()), (Servicio) habitacion.get("Economica"));
             }else{
                 JOptionPane.showMessageDialog(null,"los dias tienen que estar en digitos");
-                return;
             }
         });
 
@@ -89,7 +82,6 @@ public class ReservaHabitacionesGUI extends JFrame {
                 fachada.hacerReserva(cliente , fechaActual, Float.parseFloat(nroDiasFamiliar.getText()), (Servicio) habitacion.get("Familiar"));
             }else{
                 JOptionPane.showMessageDialog(null,"los dias tienen que estar en digitos");
-                return;
             }
         });
 
@@ -98,8 +90,23 @@ public class ReservaHabitacionesGUI extends JFrame {
                 fachada.hacerReserva(cliente , fechaActual, Float.parseFloat(nroDiasPremiun.getText()), (Servicio) habitacion.get("Premium"));
             }else{
                 JOptionPane.showMessageDialog(null,"los dias tienen que estar en digitos");
-                return;
             }
+        });
+
+        botonSiguiente.addActionListener(e -> {
+            if(estacionamiento){
+                ReservarEstacionamiento estacionamientoGUI = new ReservarEstacionamiento(restaurante, cliente);
+                estacionamientoGUI.setVisible(true);
+            }else {
+                if (restaurante) {
+                    ReservarMesaGUI mesaGUI = new ReservarMesaGUI(cliente);
+                    mesaGUI.setVisible(true);
+                }else{
+                    HotelDescription hotelDescription = new HotelDescription();
+                    hotelDescription.setVisible(true);
+                }
+            }
+            dispose();
         });
     }
 

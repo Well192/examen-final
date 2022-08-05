@@ -2,6 +2,7 @@ package ServicioEstacionamiento;
 
 import auxClasses.Servicio;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio, BeneficioEstacionamiento {
@@ -21,7 +22,9 @@ public class EspacioEstacionamiento implements PrototypeEstacionamiento,Servicio
     }
     public void addReserva(DatosReservaEstacionamiento reserva){
         reservas.add(reserva);
-        System.out.println("esta reservado estacionamiento" + this.tamano + "para :\n " + reserva.toString());
+        System.out.println("esta reservado estacionamiento " + this.tamano + " para :\n " + reserva.toString());
+        JOptionPane.showMessageDialog(null,
+                "esta reservado estacionamiento " + this.tamano + " para :\n " + reserva.toString());
     }
     @Override
     public String tamano() {

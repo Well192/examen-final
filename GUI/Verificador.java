@@ -1,4 +1,4 @@
-package auxClasses;
+package GUI;
 
 public class Verificador {
 
@@ -21,4 +21,20 @@ public class Verificador {
         }
         return true;
     }
+
+    public static boolean esDecimal(String palabra){
+        if(!esPalabra(palabra)){
+            return false;
+        }
+
+        char[] cadena = palabra.toCharArray();
+        for(char caracter: cadena){
+            if(!(Character.isDigit(caracter) || caracter == '.')){
+                return false;
+            }
+        }
+        return true;
+
+    }
+
 }

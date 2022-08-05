@@ -11,7 +11,7 @@
       <font name="Lucida Handwriting" size="20"/>
     </border>
     <children>
-      <grid id="6faf2" binding="panelMesaSim" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="6faf2" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
           <preferredSize width="500" height="120"/>
@@ -25,25 +25,25 @@
               <text value="Esta mesa esta ubicacda en "/>
             </properties>
           </component>
-          <component id="1626b" class="javax.swing.JRadioButton" binding="mesaGrandeRadioButton" default-binding="true">
+          <component id="1626b" class="javax.swing.JRadioButton" binding="mesaGrandeSimple">
             <constraints/>
             <properties>
               <text value="Mesa Grande"/>
             </properties>
           </component>
-          <component id="367ac" class="javax.swing.JRadioButton" binding="mesaPequeñaRadioButton" default-binding="true">
+          <component id="367ac" class="javax.swing.JRadioButton" binding="mesaPequenaSimple">
             <constraints/>
             <properties>
               <text value="Mesa Pequeña"/>
             </properties>
           </component>
-          <component id="fcc97" class="javax.swing.JTextField" binding="nroDePersonasTextField" default-binding="true">
+          <component id="fcc97" class="javax.swing.JTextField" binding="nroDePersonasSimple">
             <constraints/>
             <properties>
               <text value="Nro de Personas"/>
             </properties>
           </component>
-          <component id="9481" class="javax.swing.JButton" binding="reservarButton" default-binding="true">
+          <component id="9481" class="javax.swing.JButton" binding="reservarSimpleButton">
             <constraints/>
             <properties>
               <text value="Reservar"/>
@@ -65,25 +65,25 @@
               <text value="Esta mesa esta ubicacda en "/>
             </properties>
           </component>
-          <component id="e9ad6" class="javax.swing.JRadioButton" default-binding="true">
+          <component id="e9ad6" class="javax.swing.JRadioButton" binding="mesaGrandeVIP">
             <constraints/>
             <properties>
               <text value="Mesa Grande"/>
             </properties>
           </component>
-          <component id="1a183" class="javax.swing.JRadioButton" default-binding="true">
+          <component id="1a183" class="javax.swing.JRadioButton" binding="mesaPequenaVIP">
             <constraints/>
             <properties>
               <text value="Mesa Pequeña"/>
             </properties>
           </component>
-          <component id="64c76" class="javax.swing.JTextField" default-binding="true">
+          <component id="64c76" class="javax.swing.JTextField" binding="nroDePersonasVIP">
             <constraints/>
             <properties>
               <text value="Nro de Personas"/>
             </properties>
           </component>
-          <component id="ada80" class="javax.swing.JButton" default-binding="true">
+          <component id="ada80" class="javax.swing.JButton" binding="reservarVIPButton">
             <constraints/>
             <properties>
               <text value="Reservar"/>

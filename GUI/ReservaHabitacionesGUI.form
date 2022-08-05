@@ -11,7 +11,7 @@
       <font name="Lucida Handwriting" size="20"/>
     </border>
     <children>
-      <grid id="f43a0" binding="panelHabNormal" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="f43a0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
           <preferredSize width="500" height="120"/>
@@ -39,7 +39,7 @@
           </component>
         </children>
       </grid>
-      <grid id="11656" binding="panelHabEconomica" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="11656" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
           <preferredSize width="500" height="120"/>
